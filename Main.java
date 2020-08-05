@@ -10,6 +10,7 @@ class Main {
         Scanner read = new Scanner(file);
         System.out.print("wczytuje linie");
         String text = read.nextLine();
+        read.close();
         //System.out.print(text);
 
         PrintWriter write = new PrintWriter("plik.txt");
@@ -23,7 +24,8 @@ class Main {
     
         System.out.print("Ile masz lat? ");
         int age = in.nextInt();
+        in.close();
     
-        System.out.printf("Witaj, %s. W przyszlym roku bedziesz miec %d lat.", name, age);
+        System.out.printf("Witaj, %s. W przyszlym roku bedziesz miec %d lat.", name, age+1);
     }
 }
